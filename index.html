@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Pizza Delivery Web App</title>
+</head>
+<body>
+<!-- Navbar-->
+<div class="nav">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
+      <div class="container">
+        <a href="index.html"><div class="navbar-text pull-left"><h3>Karan Pizza</h3></div></a>
+        <div class="navbar-text pull-right"><a href="http://twitter.com"><i class="fa fa-twitter fa-4x"></i></a></div>
+        <div class="navbar-text pull-right"><a href="https://www.instagram.com/"><i class="fa fa-instagram fa-4x"></i></a></div>
+        <div class="navbar-text pull-right"><a href="https://www.pinterest.com"><i class="fa fa-pinterest fa-4x"></i></a></div>
+      </div>
+    </nav>
+  </div>
+<!-- Navbar-->
+<!-- Landing page-->
+  <div class="jumbotron" id="landing-content">
+    <h1 class="page-header">Karan Pizza</h1>
+    <h2 id="landing-tagline">Serving your daily pizza cravings! Available through online order only.</h2>
+    <p>*Delivery within Nairobi</p>
+    <button type="btn" class="btn btn-primary" id="pickup-btn">Pickup</button>
+    <button type="btn" class="btn btn-danger" id="delivery-btn">Delivery</button>
+    <div class="form-group" id="address">
+      <h3>Delivery Address</h3>
+ <!-- Landing page-->
+<!-- Address Form Start -->
+      <form id="address-form">
+        <div class="row">
+          <div class="col-xs-6">
+            <label for="first-name">First Name</label><input required type="text" class="form-control address-spacing">
+          </div>
+          <div class="col-xs-6">
+            <label for="last-name">Last Name</label><input required type="text" class="form-control address-spacing">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <label for="street-address">Address</label><input required type="text" class="form-control" id="street-add">
+          </div>
+          <div class="col-xs-1"></div>
+            <label for="constituency-name">Constituency</label>
+            <select required class="form-control delivery-address" id="constituency-select">
+              <option>Dagoretti</option>
+              <option>Embakasi</option>
+              <option>Kamukunji</option>
+              <option>Kasarani</option>
+              <option>Kibra</option>
+              <option>Roysambu</option>
+              <option>starehe</option>
+              <option>Westlands</option>
+              <option>Langata</option>
+              <option>Makadara</option>
+            </select>
+          </div>
+        <button type="submit" class="btn btn-primary" id="order-proceed-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+<!-- Order Content Start -->
+<div class="jumbotron" id="order-content">
+  <h1 class="page-header">Order Options</h1>
+  <div class="row">
+    <div class="col-xs-6">
+      <h2>pizza</h2>
+      <div class="row container" id="default-pizzas">
+        <div class="col-xs-4">
+          <button type="btn" class="btn btn-success pizza-option" id="cheese-default">Cheese Tikka</button>
+          <div class="default-pizzas" id="cheese-default-size">
+            <button type="btn" class="btn btn-danger indiv-pizza-default" id="cheese-sm">Regular</button>
+            <button type="btn" class="btn btn-danger indiv-pizza-default" id="cheese-md">Medium</button>
+            <button type="btn" class="btn btn-danger indiv-pizza-default" id="cheese-lg">Large</button>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <button type="btn" class="btn btn-success pizza-option" id="pep-default">Pepperoni tikka</button>
+          <div class="default-pizzas" id="pep-default-size">
+            <button type="btn" class="btn btn-danger indiv-pizza-default" id="pep-sm">Regular</button>
+            <button type="btn" class="btn btn-danger indiv-pizza-default" id="pep-md">Medium</button>
+            <button type="btn" class="btn btn-danger indiv-pizza-default" id="pep-lg">Large</button>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <button type="btn" class="btn btn-success pizza-option" id="veggie-default">Veggie Tikka</button>
+          <div class="default-pizzas" id="veggie-default-size">
+            <button type="btn" class="btn btn-danger indiv-pizza-default" id="veggie-sm">Regular</button>
+            <button type="btn" class="btn btn-danger indiv-pizza-default" id="veggie-md">Medium</button>
+            <button type="btn" class="btn btn-danger indiv-pizza-default" id="veggie-lg">Large</button>
+          </div>
+        </div>
+      </div>
+ 
+        <button type="btn" class="btn btn-primary" id="custom-pizza-btn">Order Form</button>
+
+        <form class="form-group" id="custom-pizza">
+          <div id="form-content">
+            <h3 id="form-header">Order Here!</h3>
+            <div class="row container">
+              <div class="col-xs-6"><p>Size</p></div>
+              <div class="col-xs-6" class="form-option">
+                <select required class="form-control" id="size">
+                  <option></option>
+                  <option value="Regular">Regular @Ksh500</option>
+                  <option value="Medium">Medium @Ksh800</option>
+                  <option value="Large">Large @Ksh1000</option>
+                </select>
+              </div>
+            </div>
+            <div class="row container">
+              <div class="col-xs-6"><p>Flavour</p></div>
+              <div class="col-xs-6" class="form-option">
+                <select required class="form-control" id="flavour">
+                  <option value="veggies">Veg Tikka</option>
+                  <option value="chicken">Chicken Tikka</option>
+                  <option value="pepperoni">Pepperoni Tikka</option>
+                  <option value="italian">Italian Tikka</option>
+                </select>
+              </div>
+            </div>
+            <div class="row container">
+              <div class="col-xs-6"><p>Crust</p></div>
+              <div class="col-xs-6" class="form-option">
+                <select required class="form-control" id="crust">
+                  <option value="crispy">Crispy @Ksh100</option>
+                  <option value="stuffed">stuffed @Ksh150</option>
+                  <option value="glutenfree">Gluten-free @Ksh200</option>
+                </select>
+              </div>
+            </div> 
+          </div>
+          <button type="submit" class="btn btn-danger" id="submit-custom-pizza">Place Order</button>
+        </form>
+
+      </div>
+      <div class="col-xs-2" id="toppings">
+        <h2>Toppings</h2>
+        <button type="btn" class="btn btn-info side-option" id="greens">Green-peppers</button>
+        <button type="btn" class="btn btn-info side-option" id="onions">Onions</button>
+        <button type="btn" class="btn btn-info side-option" id="mushrooms">Mushrooms</button>
+      </div>
+
+      <div class="col-xs-4" id="price-content">
+        <h1 class="page-header">Cart</h1>
+        <h2>Price: Ksh <span id="final-cost"></span></h2>
+        <div id="order-details">
+          <p><a id="pizza-details-dropdown">Order Summary</a></p>
+          <ul id="pizza-details"></ul>
+          <p><a id="default-pizza-dropdown">Pizza</a></p>
+          <ul id="default-pizza-details"></ul>
+          <p><a id="sides-dropdown">Toppings</a></p>
+          <ul id="sides-details"></ul>
+        </div>
+        <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
+        <h3><span id="delivery-option"></span></h3>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/fontawesome.js"></script>
+</html>
+
+</html>
