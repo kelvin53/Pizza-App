@@ -30,8 +30,3 @@ _Bootstrap_
 _JavaScript_
 _GitHub_
 
-### License
-
-This software is licensed under MIT license.
-
-Copyright (c) 2020 **_Kelvin Kiprono_**
