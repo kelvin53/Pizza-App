@@ -35,12 +35,9 @@ Order.prototype.finalCost = function () {
   }
   return cartTotalPrice;
 }
-function Address (streetAddress, city, state, zipcode) {
-  this.streetAddress = streetAddress;
-  this.city = city;
-  this.state = state;
-  this.zipcode = zipcode;
-  this.deliveryAddress = (streetAddress + "  " + city + ", " + state + "  " + zipcode);
+function Address (constituency) {
+  this.constituency = constituency;
+  this.deliveryAddress = (constituency + "  " + "Nairobi");
 }
 
 
